@@ -1,8 +1,4 @@
-import { useState } from "react";
-import { object } from "yup";
-import { useFeedQuery } from "../../../generated/graphql";
-// import { useFeedLazyQuery } from "../../../generated/graphql";
-import Links from "./Links";
+
 
 const Search = () => {
 //   const [searchFilter, setSearchFIlter] = useState("");

@@ -12,7 +12,7 @@ return(
 )
 }
 export const getServerSideProps = async ({
-    req,
+    
     res,
   }: GetServerSidePropsContext) => {
     
