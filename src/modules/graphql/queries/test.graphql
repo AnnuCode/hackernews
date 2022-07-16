@@ -1,0 +1,80 @@
+
+
+
+
+mutation Login($credentials: loginCredentials!) {
+  login(credentials: $credentials) {
+
+    message
+
+    user{
+        name
+    }
+  }
+}
+
+query implicitLogin {
+  implicitLogin {
+    loggedIn
+    name
+  }
+}
+
+# mutation post($description: String!, $url: String!){
+  
+#   post(description: $description, url: $url) {
+#     url
+#     description
+#     id
+#     createdAt
+#   }
+# }
+
+mutation Vote($voteLinkId2: Int!) {
+  vote(linkId: $voteLinkId2) {
+link {
+  url
+  description
+}    
+user {
+  name
+}
+  }
+}
+
+
+
+query Feed($filter: String, $skip: Int, $take: Int, $orderBy: [LinkOrderByInput!]) {
+  feed(filter: $filter, skip: $skip, take: $take, orderBy: $orderBy) {
+    links {
+      url
+      description
+      id
+      createdAt
+      postedBy{
+        name
+      }
+       voters {
+    name
+  }
+    }
+  }
+}
+
+mutation CreateAccount($credentials: loginCredentials!) {
+  createAccount(credentials: $credentials) {
+    message
+    user {
+      name
+    }
+  }
+}
+
+mutation Post($description: String!, $url: String!) {
+  post(description: $description, url: $url) {
+    id
+    url
+    description
+    createdAt
+  }
+}
