@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { usePostMutation } from "../../../generated/graphql";
 import toast, {Toaster} from "react-hot-toast"
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 
 const CreateLink = () => {
-  const router = useRouter()
+  
 
   const [formState, setFormState] = useState({
     description: "",
