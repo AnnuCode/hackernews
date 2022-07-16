@@ -28,7 +28,7 @@ function createIsomorphicLink(ctx?: SchemaContext) {
   }
   const httpLink = new HttpLink({
     uri: `${
-      process.env.SERVER_URL ?? "http://localhost:3000"
+      process.env.SERVER_URL ?? "https://hackernews-eta.vercel.app"
     }/api/graphql`,
     credentials: "same-origin",
   });
